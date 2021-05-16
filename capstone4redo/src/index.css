@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+* {
+    font-family: 'Karla', sans-serif;
+}
+
+.appContainer {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    display: block;
+    border: solid black 3px;
+    border-radius: 8px;
+}
+@media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 812px) { 
+
+        .appContainer {
+            width: 80%;
+            padding: 8px;
+            font-size: 190%;
+        }
+}
+@media screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px) {
+
+        .appContainer {
+            width: 80%;
+            padding: 15px;
+            font-size: 190%;
+        }
+    }
+
+@media screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) { 
+
+        .appContainer {
+            width: 40%;
+            padding: 15px;
+        }
+}
+
+
+
+
+/* animation */
