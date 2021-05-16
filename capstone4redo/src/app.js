@@ -3,7 +3,6 @@ import {Switch, Route } from 'react-router-dom';
 
 
 import Main from './components/main'
-import Weekly from './components/weekly'
 import SearchForecast from './components/searchForecast'
 import About from './components/about'
 
@@ -19,10 +18,6 @@ export default function App(){
 
                 <Route path='/searchForecast'>
                     <SearchForecast/>
-                </Route>
-
-                <Route path='/weekly'>
-                    <Weekly/>
                 </Route>
 
                 <Route path='/about'>

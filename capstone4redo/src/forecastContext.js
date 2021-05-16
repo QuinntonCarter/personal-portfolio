@@ -31,9 +31,9 @@ function ForecastContextProvider(props){
     }
 
     function autoDetectLocation(){
-        axios.get('http://ip-api.com/json/')
+        axios.get('https://ipapi.co/json/')
         .then(res => 
-            axios.get(`http://api.weatherapi.com/v1/current.json?key=fdd79d1d2ca9485abab32815211205&q=${res.data.zip}`)
+            axios.get(`http://api.weatherapi.com/v1/current.json?key=fdd79d1d2ca9485abab32815211205&q=${res.data.city}`)
             .then(res => setAutoLocation(res.data))
             .catch(err => console.log(err))
         )
@@ -41,7 +41,7 @@ function ForecastContextProvider(props){
     }
 
     function autoDetectCity(){
-        axios.get('http://ip-api.com/json/')
+        axios.get('https://ipapi.co/json/')
         .then(res => setAutoCityName(res.data.city))
         .catch(err => console.log(err))
     }
