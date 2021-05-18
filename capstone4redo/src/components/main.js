@@ -31,7 +31,10 @@ export default function Main(){
                     <div>
                         <h2> {forecastDays[0]} </h2>
                         <h1> {autoCityName}  </h1>
-                        <h2 style={{fontSize: '250%'}}> {Math.floor(autoLocation.current.temp_f)}˚</h2>
+                        <h2 style={{fontSize: '250%'}}> {Math.floor(autoLocation.current.temp_f)}˚F</h2>
+                        <img src={autoLocation.current.condition.icon} alt='condition visual'/>
+                        <h3> {autoLocation.current.condition.text}</h3>
+                        <h4> Humidity: {autoLocation.current.humidity}% </h4>
                     </div>
                     : 
                     <div className='loading'>
