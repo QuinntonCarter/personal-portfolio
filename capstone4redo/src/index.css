@@ -2,6 +2,16 @@
 
 * {
     font-family: 'Karla', sans-serif;
+    -moz-font-feature-settings: 'Karla', sans-serif;
+    -ms-font-feature-settings: 'Karla', sans-serif;
+    font-feature-settings: 'Karla', sans-serif;
+}
+
+body {
+    background: url('./photos/backgroundClouds.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .appContainer {
@@ -11,8 +21,8 @@
     text-align: center;
     position: relative;
     display: block;
-    border: solid black 3px;
     border-radius: 8px;
+    background-color: rgba(211, 211, 211, 0.466);
 }
 @media only screen 
     and (min-device-width: 320px) 
@@ -20,8 +30,9 @@
 
         .appContainer {
             width: 80%;
+            height: 95vh;
             padding: 8px;
-            font-size: 190%;
+            font-size: 2vh;
         }
 }
 @media screen
@@ -31,7 +42,7 @@
         .appContainer {
             width: 80%;
             padding: 15px;
-            font-size: 190%;
+            font-size: 1.8vh;
         }
     }
 
@@ -40,12 +51,10 @@
     and (max-device-width: 1600px) { 
 
         .appContainer {
-            width: 40%;
-            padding: 15px;
+            width: 60%;
+            padding: 8px;
         }
 }
-
-
 
 
 /* animation */

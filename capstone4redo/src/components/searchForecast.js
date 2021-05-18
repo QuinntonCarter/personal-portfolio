@@ -10,7 +10,7 @@ export default function SearchForecast(){
     }
 
     return(
-        <div className='appContainer'>
+        <div className=''>
             {console.log(searchedLocation.forecast)}
             { searchedLocation.location ? 
                 <>

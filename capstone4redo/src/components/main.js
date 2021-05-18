@@ -22,7 +22,7 @@ export default function Main(){
     }
 
     return(
-            <>
+            <form>
                 <h1> <i style={{color: 'navy'}} className="fas fa-umbrella"/>
                 </h1>
                 <input style={{fontSize:'70%'}} className='locationInput' name='location' value={inputs.location} onChange={handleChange} placeholder='enter city or zip code'/>
@@ -41,6 +41,6 @@ export default function Main(){
                         <h2> loading... </h2>
                     </div>
                 }
-        </>
+        </form>
     )
 }
