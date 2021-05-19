@@ -7,7 +7,7 @@ import { ForecastContext } from '../forecastContext';
 export default function Main(){
     const { autoLocation, autoCityName, forecastDays } = useContext(ForecastContext)
 
-    const {getForecast} = useContext(ForecastContext)
+    const { getForecast } = useContext(ForecastContext)
 
     const [inputs, setInputs] = useState({location:''})
 

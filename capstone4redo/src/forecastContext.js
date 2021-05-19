@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import date from 'date-and-time';
 
-// state = data.region.name
-const ForecastContext = React.createContext()
+const ForecastContext = React.createContext();
 
 function ForecastContextProvider(props){
     const [autoLocation, setAutoLocation] = useState();
@@ -14,7 +13,7 @@ function ForecastContextProvider(props){
 
     const [day, setDay] = useState('');
     const now = new Date();
-    const forecastDays = []
+    const forecastDays = [];
 
     function getDates(num){
         const next = date.addDays(now, +num)

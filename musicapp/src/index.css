@@ -1,0 +1,39 @@
+* {
+  border-radius: 5px;
+}
+
+.mainApp {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: block;
+}
+
+.searchBtn {
+  margin: 4px;
+  padding: 5px;
+  border: none;
+}
+
+input {
+  margin: 4px;
+  padding: 5px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.342);
+}
+
+select {
+  margin: 4px;
+  padding: 5px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.342);
+}
+
+/* results style */
+/* 
+.resultsImg {
+  height: 50%;
+  width: 50%;
+} */
