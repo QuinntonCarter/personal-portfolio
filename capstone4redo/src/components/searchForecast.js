@@ -11,7 +11,6 @@ export default function SearchForecast(){
 
     return(
         <div className=''>
-            {console.log(searchedLocation.forecast)}
             { searchedLocation.location ? 
                 <>
                     <h2> {forecastDays[0]} </h2>

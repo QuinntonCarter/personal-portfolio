@@ -1,1 +1,0 @@
-// creates component that styles/displays artist/song result info, link to be mapped onto artist map from app.js

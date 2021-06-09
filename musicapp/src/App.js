@@ -1,29 +1,25 @@
-import { useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Search  from './components/searchBar.js';
 
-import { AppContext } from './appContext'
+import Banner from './components/banner.js';
+import Search  from './components/searchBar.js';
+import Main from './components/main.js';
+import ResultDetails from './components/resultDetails.js';
 
 function App() {
-  const { searchQuery } = useContext(AppContext)
-
-  const mappedResults = searchQuery.map(results => 
-    <>
-      {results.img ? 
-      <img className='resultsImg' src={results.img} alt='artist'/> : 
-      <i style={{margin: '20px', fontSize: '920%'}} className="fas fa-microphone-slash"> No Image</i>}
-    </>)
 
   return (
-    <div className="mainApp">
-      <Search/>
-      {console.log(searchQuery)}
-      {mappedResults}
-      {/* <Switch>
-        <Route>
+    <div className='mainContainer'>
+    <Banner/>
+        <Search/>
+          <Switch>
+            <Route exact path='/'>
+              <Main/>
+            </Route>
 
-        </Route>
-      </Switch> */}
+            <Route path='/resultDetails'>
+              <ResultDetails/>
+            </Route>
+          </Switch>
     </div>
   );
 }

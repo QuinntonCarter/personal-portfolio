@@ -1,16 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@900&display=swap');
+
 * {
   border-radius: 5px;
+  font-family: 'Lato', sans-serif;
 }
 
-.mainApp {
-  margin: 0 auto;
+div.mainContainer {
   justify-content: center;
-  align-items: center;
   text-align: center;
-  position: relative;
-  display: block;
+  text-justify: center;
+  margin: 0 auto;
+  display: grid;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  border: black solid 3px;
+  padding: 20px;
 }
 
+/* banner */
+.bannerWrapper {
+  width: 375px;
+  text-align: left;
+  /* border: solid red 2px; */
+  font-size: 220%;
+  margin: 10px;
+}
+
+
+header > h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* searchbar */
+.searchBarWrapper {
+  /* border: solid 2px green; */
+}
+
+/* main app */
 .searchBtn {
   margin: 4px;
   padding: 5px;
@@ -31,9 +60,45 @@ select {
   background-color: rgba(128, 128, 128, 0.342);
 }
 
+/* error  */
+.errorMsg {
+  margin: 45px;
+  color: rgb(112, 112, 112);
+}
+
+.errorMsg > i {
+  font-size: 1050%; 
+  margin-bottom: 0px;
+  color: rgb(201, 200, 200);
+}
+
+.fa-fast-backward {
+  font-size: 350%;
+  cursor: pointer;
+}
+
 /* results style */
-/* 
-.resultsImg {
-  height: 50%;
-  width: 50%;
-} */
+.resultCompWrapper {
+  /* border: solid 2px orange; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.resultsInfo {
+  text-align: left;
+  margin: 20px;
+}
+
+.img {
+  max-width: 70%;
+}
+
+.resultDetails {
+  display: flex;
+  flex-direction: row;
+}
+
+.result {
+
+}
