@@ -1,10 +1,9 @@
 import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../appContext.js';
-// fix styling so it fits both search type -- move img to left and details to right, make linkable for song details
 
 export default function ResultComp(props){
-    const { name, genres, songId, albumImg, artist, title, musicKey, bpm, timeSig } = props;
+    const { name, songId, albumImg, artist, title, musicKey, bpm, timeSig } = props;
     const { getDetails } = useContext(AppContext);
 
     useEffect(() => {
@@ -13,7 +12,7 @@ export default function ResultComp(props){
 
     return(
         <div className='result'>
-            <div className='resultsInfo'> 
+            <div style={{fontSize: '60%'}} className='resultsInfo'> 
                 <h1> {name||artist} {title ? `- ${title}`: ''} </h1>
                 <h1> Key: {musicKey} </h1>
                 <h1> BPM: {bpm} </h1>
@@ -21,26 +20,16 @@ export default function ResultComp(props){
             </div>
             <Link to='/resultDetails'>
                 {albumImg  ? 
-                <div className='resultsImg'>
+                <div style={{width: '150%', marginLeft: '-50px'}} className='resultsImg'>
                     <img className='img' src={albumImg} alt='artist'/> 
                 </div>
                     : 
                     <> 
-                        <i style={{fontSize: '1050%', color: 'rgb(201, 200, 200)'}} className="fas fa-eye-slash"/> 
+                        <i style={{fontSize: '950%', color: 'rgb(201, 200, 200)'}} className="fas fa-eye-slash"/> 
                         <p className='errorMsg' style={{fontStyle: 'italic'}}> image not found </p> 
                     </>
                     }
             </Link>
-                {/* { genres ? 
-                    <p> {genres.map(genre => 
-                        <> {`/ ${genre}`} </>
-                        )} 
-                    </p>
-                    : 
-                        <>
-                        </>
-                } */}
-                <hr/>
         </div>
     )
 }

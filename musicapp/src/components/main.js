@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { AppContext } from '../appContext.js';
 import ResultComp from './resultComp.js';
 
-
 export default function Main(){
     const { searchQuery } = useContext(AppContext);
 
@@ -11,7 +10,7 @@ export default function Main(){
     <div className='errorMsg'> 
         <i style={{fontSize: '1050%', color: 'rgb(201, 200, 200)'}} className="fas fa-volume-mute"/>
         <p> no results in database! <br/> check spelling or try another search. </p> 
-    </div> 
+    </div>
     : 
     searchQuery.map(results => 
         <>
