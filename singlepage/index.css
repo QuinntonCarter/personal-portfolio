@@ -1,0 +1,332 @@
+/*** fonts ***/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto+Slab&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/*** page ***/
+* {
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+html {
+    background-color: blue;
+}
+
+#pageContainer {
+    display: grid;
+    row-gap: 150px;
+    grid-template-rows: 820px 700px 700px auto 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* icons */
+.fab, .fas, .far {
+    color: white;
+    font-size: 30px;
+}
+
+/* nav */
+.nav {
+    font-family: 'Lato', sans-serif;
+    position: fixed;
+    align-items: center;
+    display: grid;
+    padding-left: 15px;
+    height: 700px;
+    width: 120px;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+}
+
+.nav > a {
+    font-size: 18px;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.nav > a:hover {
+    background-color: rgba(255, 255, 255, 0.692);
+    color: blue;
+    border-radius: 0;
+}
+
+a:hover > i {
+    color: blue;
+    border-radius: 0;
+}
+
+div.nav > a > i > span {
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    color: blue;
+}
+
+div.nav > a > i {
+    font-size: 40px;
+}
+
+/* header/name */
+.headerDiv {
+    text-align: center;
+    margin: auto;
+    grid-column: 2/6;
+}
+
+/*  */
+/*  */
+/* make appear after delay 1-2s */
+h1.header {
+    color: white;
+    animation: onload;
+    font-size: 90px;
+    font-family: 'Press Start 2P', cursive;
+}
+@keyframes onload {
+    from, to { color: transparent }                                                                 
+    100% { color: white }  
+}
+/*  */
+/*  */
+
+h1.header > span.typewriter-text {
+    color: white;
+    font-size: 35px;
+    border-radius: 0px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 100;
+    /* tied to animation functioning */
+    overflow: hidden;
+    display: inline-block;
+    border-right: .20em solid white;
+    box-sizing: border-box;
+    white-space: nowrap;
+    margin: 0 auto; 
+    letter-spacing: .20em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+
+/* about */
+#about {
+    grid-row: 2;
+    grid-column: 2/6;
+    border: solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    justify-items: center;
+    align-items: center;
+    color: white;
+}
+
+#about > img {
+    grid-column: 2;
+    width: 85%;
+    margin-right: 20px;
+    /* border-radius: 0; */
+}
+
+#about > p {
+    padding: 50px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+/* skills */
+div > #skills {
+    border: solid;
+}
+
+#skills {
+    grid-row: 3;
+    grid-column: 2/6;
+    /* internal grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    font-size: 44px;
+    color: white;
+}
+
+/* skills header style */
+header.skillsHeader {
+    grid-row: 1;
+    padding: 8px;
+    font-weight: 900px;
+    margin: 40px;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* frontend */
+div#skills > ul.frontend {
+    grid-column: 1;
+    grid-row: 2/6
+}
+
+
+div#skills > ul > li.animated {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    height: 80px;
+    margin: 40px auto;
+    transition: width .5s;
+}
+
+div#skills > ul > li.animated:hover {
+    width: 175px;
+}
+
+/* backend */
+div#skills > ul.backend {
+    margin-top: -50px;
+    grid-column: 2;
+    grid-row: 2/6
+}
+
+div#skills > ul > li.animatedImg {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    height: 80px;
+    margin: 40px auto;
+    transition: width .48s;
+}
+
+div#skills > ul > li.animatedImg:hover {
+    width: 205px;
+}
+
+div#skills > ul > li > i, div#skills > ul > li > img {
+    font-size: 90px;
+    height: 120%;
+    color: rgb(0, 81, 128);
+    position: absolute;
+    left: -40px;
+    top: 0;
+}
+
+/* for mongoose and express */
+span.text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 35px;
+}
+
+/* all skills styles */
+div#skills > ul > li > span {
+    font-family: 'Open Sans', helvetica;
+    font-size: px;
+}
+
+div#skills > ul > li {
+    list-style: none;
+    position: relative;
+    width: 100px;
+    height: 80px;
+    display: block;
+}
+
+/* hides all skillText and slides from behind */
+div#skills > ul > li > span.skillText {
+    font-size: 34px;
+    font-family: 'Roboto Mono', monospace;
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+div#skills > ul > li:hover > span.skillText {
+    color: white;
+    opacity: 1;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*  */
+/* projects */
+#projects {
+    border: solid white;
+    display: grid;
+    grid-row: 4;
+    grid-column: 2/6;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    font-family: 'Roboto Mono', monospace;
+    align-items: end;
+    padding: 20px;
+}
+
+#projects > span > img {
+    width: 350px;
+    border-radius: 0;
+    padding: 5px;
+}
+
+#projects > span {
+    color: white;
+    margin: 35px;
+}
+
+#projects > span > header > a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    max-width: 170px;
+    padding: 8px;
+}
+
+#projects > span > header > a:hover {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.692);
+    color: blue;
+    border-radius: 0;
+    text-decoration: none;
+    padding: 8px;
+}
+
+#contact {
+    border-radius: 0;
+    grid-row: 5;
+    grid-column: 2/6;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    display: flex;
+    justify-self: center;
+    align-self: end;
+}
+
+.bodyLinks {
+    color: blue;
+    text-decoration: underline;
+}
