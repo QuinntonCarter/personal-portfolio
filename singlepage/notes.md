@@ -1,2 +1,0 @@
-- figure out projects section layout
-- start ascii/braille generator

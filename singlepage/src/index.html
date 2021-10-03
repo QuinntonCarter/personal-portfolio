@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hello World</title>
+    <meta
+      name="description"
+      content="Portfolio website for Quinnton Carter: MERN full stack web developer."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/11b32a17c8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="pageContainer">
+      <div class="nav">
+        <a title="skip to about me" href="#about"> about </a>
+        <a title="skip to skill details" href="#skills"> skills </a>
+        <a title="skip to project details" href="#projects"> projects </a>
+        <a
+          title="View my Github repos!"
+          href="https://github.com/quinntoncarter"
+        >
+          <i class="fab fa-github-alt"> <span> github </span></i>
+        </a>
+        <a title="E-mail me!" href="mailto: qdevzsz@gmail.com">
+          <i class="far fa-paper-plane">
+            <br />
+            <span> e-mail </span>
+          </i>
+        </a>
+        <a title="Text me via your app of choice!" href="sms:+13853432132">
+          <i class="fas fa-mobile-alt"> <span> cell </span> </i>
+        </a>
+      </div>
+      <div class="headerDiv">
+        <h1 class="header">
+          Quinnton Carter
+          <br />
+          <span class="typewriter-text"> *fullstack web developer </span>
+        </h1>
+      </div>
+      <div id="about">
+        <p>
+          Hello world!
+          <br />
+          <br />
+          My name is Quinnton Carter and I'm a web developer currently based in
+          Salt Lake City, Utah. My passion lies in creating. I'm a visual person
+          and a problem solver who plans to utilize my skills to do some good in
+          the world. Web development allows me to explore my passions while
+          creating practical and fun tools that enrich the lives of everyday
+          people like you and me.
+          <br />
+          <br />
+          In my free time I enjoy spending time with family, illustration,
+          listening to and creating music, and gaming.
+        </p>
+        <img title="headshot placeholder" src="../images/forPortfolio.jpeg" />
+      </div>
+
+      <div id="skills">
+        <header class="skillsHeader">Frontend</header>
+        <ul class="frontend">
+          <br />
+          <li class="animated">
+            <i
+              style="color: yellow"
+              title="Javascript"
+              class="fab fa-js-square"
+            ></i>
+            <span class="skillText"> Javascript </span>
+          </li>
+          <li class="animated">
+            <i
+              style="color: rgb(109, 235, 252)"
+              title="React.js"
+              class="fab fa-react"
+            ></i>
+            <span class="skillText"> React.js </span>
+          </li>
+          <li class="animated">
+            <i style="color: darkorange" title="HTML" class="fab fa-html5"></i>
+            <span class="skillText"> HTML </span>
+          </li>
+          <li class="animated">
+            <i style="color: royalblue" title="CSS" class="fab fa-css3-alt"></i>
+            <span class="skillText"> CSS </span>
+          </li>
+        </ul>
+        <header class="skillsHeader">Backend</header>
+        <ul class="backend">
+          <br />
+          <li class="animatedImg">
+            <i
+              style="color: forestgreen"
+              title="Node.js"
+              class="fab fa-node"
+            ></i>
+            <span class="skillText"> Node.js </span>
+          </li>
+          <span class="text" style="font-weight: lighter"> Express.js </span>
+          <li class="animatedImg">
+            <img src="../images/mongodbLeafPNG.png" />
+            <span class="skillText" style="font-weight: lighter">
+              MongoDB
+            </span>
+          </li>
+          <span class="text" style="font-weight: lighter; color: darkred">
+            mongoose.js
+          </span>
+        </ul>
+      </div>
+
+      <div id="projects">
+        <span>
+          <img src="../projects/thumbnails/umbrella.png" alt="" />
+          <header>
+            <a href="http://umbrellaweather.surge.sh"> Umbrella </a>
+          </header>
+          A weather app which displays your local weather upon loading and also
+          offers the option to search any place in the world.
+          <br />
+          <span
+            style="
+              border-radius: 0px;
+              background-color: rgba(255, 255, 255, 0.692);
+              color: blue;
+            "
+          >
+            API:
+            <a class="bodyLinks" href="https://www.weatherapi.com"
+              >WeatherAPI</a
+            >
+            <br />
+            HTML, CSS, Javascript, React.js, React Router
+          </span>
+        </span>
+        <span>
+          <img src="../projects/thumbnails/cue.png" alt="" />
+          <header>
+            <a href="https://cue.surge.sh"> Cue </a>
+          </header>
+          <a href=""> </a> This app can be used to find the BPM and key of any
+          song in the API.
+          <br />
+          <span
+            style="
+              border-radius: 0px;
+              background-color: rgba(255, 255, 255, 0.692);
+              color: blue;
+            "
+          >
+            API:
+            <a class="bodyLinks" href="https://www.getsongkey.com/api"
+              >GetSongKey</a
+            >
+            <br />
+            HTML, CSS, Javascript, React.js, React Router
+          </span>
+        </span>
+        <!-- <span>
+                    <img src='' alt=''/>
+                    <header>
+                        <a> three </a>
+                    </header>
+                        <a href=''>
+                        </a> description goes here. it's not very long or detailed but it is descriptive and to the point.
+                        <span style='border-radius: 0px; background-color: rgba(255, 255, 255, 0.692); color: blue'> </span>
+                    </span>
+                <span>
+                    <img src='' alt=''/>
+                    <header> <a> four </a> </header> 
+                        <a href=''>
+                        </a> description goes here. it's not very long or detailed but it is descriptive and to the point.
+                        <span style='border-radius: 0px; background-color: rgba(255, 255, 255, 0.692); color: blue'> </span>
+                    </span> -->
+      </div>
+
+      <div title="Layout inspired by: Windows 98 BSOD" id="contact">
+        <h3>Quinnton Carter 2021</h3>
+      </div>
+    </div>
+
+    <script src="" async defer></script>
+  </body>
+</html>
