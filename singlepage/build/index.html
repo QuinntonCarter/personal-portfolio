@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Hello World</title>
+    <title> Hello World </title>
     <meta
       name="description"
       content="Portfolio website for Quinnton Carter: MERN full stack web developer."
@@ -14,6 +14,11 @@
       src="https://kit.fontawesome.com/11b32a17c8.js"
       crossorigin="anonymous"
     ></script>
+    <!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+<!-- JavaScript Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+
   </head>
   <body>
     <div id="pageContainer">
@@ -45,8 +50,9 @@
         </h1>
       </div>
       <div id="about">
+        <span class='displayOnPhone'> Hello world! </span>
         <p>
-          Hello world!
+          <span class='displayOnDsktp'> Hello world! </span>
           <br />
           <br />
           My name is Quinnton Carter and I'm a web developer currently based in
@@ -73,7 +79,11 @@
               title="Javascript"
               class="fab fa-js-square"
             ></i>
-            <span class="skillText"> Javascript </span>
+            <span class="skillText">
+              Javascript
+            </br>
+            + jQuery
+            </span>
           </li>
           <li class="animated">
             <i
@@ -81,20 +91,25 @@
               title="React.js"
               class="fab fa-react"
             ></i>
-            <span class="skillText"> React.js </span>
+            <span class="skillText">
+              React.js
+              <br/>
+              + React Router <img style='height: 35%' src="./images/react-router-logo-png-transparent.png" alt='axios png logo'/>
+            </span>
           </li>
-          <li class="animated">
+          <li class="html">
             <i style="color: darkorange" title="HTML" class="fab fa-html5"></i>
             <span class="skillText"> HTML </span>
           </li>
-          <li class="animated">
+          <li class="html">
             <i style="color: royalblue" title="CSS" class="fab fa-css3-alt"></i>
             <span class="skillText"> CSS </span>
           </li>
         </ul>
-        <header class="skillsHeader">Backend</header>
+        <header class="skillsHeader backend"> Backend</header>
         <ul class="backend">
           <br />
+          <br/>
           <li class="animatedImg">
             <i
               style="color: forestgreen"
@@ -105,7 +120,7 @@
           </li>
           <span class="text" style="font-weight: lighter"> Express.js </span>
           <li class="animatedImg">
-            <img src="./images/mongodbLeafPNG.png" />
+            <img src="./images/mongodbLeafPNG.png" alt='mongodb png'/>
             <span class="skillText" style="font-weight: lighter">
               MongoDB
             </span>
@@ -113,12 +128,17 @@
           <span class="text" style="font-weight: lighter; color: darkred">
             mongoose.js
           </span>
+          <li style='margin: 40px auto'>
+            <img style='height: 50%' src="./images/Axios_logo_(2017).svg.png" alt='axios png logo'/>
+            <!-- <span class="skillText" style="font-weight: bolder">
+              Axios
+            </span> -->
         </ul>
       </div>
 
       <div id="projects">
         <span>
-          <img src="./projects/thumbnails/umbrella.png" alt="" />
+          <img src="./projects/thumbnails/umbrella.png" alt="Umbrella app thumbnail" />
           <header>
             <a href="http://umbrellaweather.surge.sh"> Umbrella </a>
           </header>
@@ -133,15 +153,40 @@
             "
           >
             API:
-            <a class="bodyLinks" href="https://www.weatherapi.com"
-              >WeatherAPI</a
+            <a class="bodyLinks" href="https://www.weatherapi.com">
+              WeatherAPI</a
             >
-            <br />
-            HTML, CSS, Javascript, React.js, React Router
           </span>
-        </span>
+            <br />
+            <span class='projectSkills'>
+              <i
+                style="color: yellow"
+                title="Javascript"
+                class="fab fa-js-square"
+              ></i>
+              <i
+                style="color: rgb(109, 235, 252)"
+                title="React.js"
+                class="fab fa-react"
+              ></i>
+              <i
+                style="color: darkorange"
+                title="HTML"
+                class="fab fa-html5"
+              ></i>
+              <i
+                style="color: royalblue"
+                title="CSS"
+                class="fab fa-css3-alt"
+              ></i>
+              <img
+                style="height: 20%; width: 20%"
+                src="./images/Axios_logo_(2017).svg.png"
+                alt='axios png logo'/>
+            </span>
+          </span>
         <span>
-          <img src="./projects/thumbnails/cue.png" alt="" />
+          <img src="./projects/thumbnails/cue.png" alt="Cue app thumbnail" />
           <header>
             <a href="https://cue.surge.sh"> Cue </a>
           </header>
@@ -160,28 +205,38 @@
               >GetSongKey</a
             >
             <br />
-            HTML, CSS, Javascript, React.js, React Router
+          </span>
+          <span class='projectSkills'>
+            <i
+              style="color: yellow"
+              title="Javascript"
+              class="fab fa-js-square"
+            ></i>
+            <i
+              style="color: rgb(109, 235, 252)"
+              title="React.js"
+              class="fab fa-react"
+            ></i>
+            <i
+              style="color: darkorange"
+              title="HTML"
+              class="fab fa-html5"
+            ></i>
+            <i
+              style="color: royalblue"
+              title="CSS"
+              class="fab fa-css3-alt"
+            ></i>
+            <img
+              style="height: 20%; width: 20%"
+              src="./images/Axios_logo_(2017).svg.png"
+              alt='axios png logo'
+            />
           </span>
         </span>
-        <!-- <span>
-                    <img src='' alt=''/>
-                    <header>
-                        <a> three </a>
-                    </header>
-                        <a href=''>
-                        </a> description goes here. it's not very long or detailed but it is descriptive and to the point.
-                        <span style='border-radius: 0px; background-color: rgba(255, 255, 255, 0.692); color: blue'> </span>
-                    </span>
-                <span>
-                    <img src='' alt=''/>
-                    <header> <a> four </a> </header> 
-                        <a href=''>
-                        </a> description goes here. it's not very long or detailed but it is descriptive and to the point.
-                        <span style='border-radius: 0px; background-color: rgba(255, 255, 255, 0.692); color: blue'> </span>
-                    </span> -->
       </div>
 
-      <div title="Layout inspired by: Windows 98 BSOD" id="contact">
+      <div title="Layout inspired by: Windows 98 BSOD" id="footer">
         <h3>Quinnton Carter 2021</h3>
       </div>
     </div>

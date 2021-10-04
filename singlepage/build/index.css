@@ -10,6 +10,11 @@
   text-decoration: none;
 }
 
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
 html {
   background-color: blue;
 }
@@ -17,7 +22,7 @@ html {
 #pageContainer {
   display: grid;
   row-gap: 150px;
-  grid-template-rows: 820px 700px 700px auto 100px;
+  grid-template-rows: 800px 700px 700px auto 100px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -31,7 +36,6 @@ html {
 
 /* nav */
 .nav {
-  font-family: "Lato", sans-serif;
   position: fixed;
   align-items: center;
   display: grid;
@@ -41,6 +45,7 @@ html {
   left: 0;
   top: 0;
   background-color: transparent;
+  letter-spacing: .1em;
 }
 
 .nav > a {
@@ -60,12 +65,14 @@ html {
 a:hover > i {
   color: blue;
   border-radius: 0;
+  display: block;
 }
 
 div.nav > a > i > span {
   font-size: 18px;
   font-family: "Press Start 2P", cursive;
   color: blue;
+  display: grid;
 }
 
 div.nav > a > i {
@@ -74,18 +81,23 @@ div.nav > a > i {
 
 /* header/name */
 .headerDiv {
+  position: sticky;
+  top: 0;
   text-align: center;
   margin: auto;
   grid-column: 2/6;
+  background-color: blue;
+  border-radius: 0px;
+  z-index: 2;
+  letter-spacing: .3em;
+  width: 100%
+
 }
 
-/*  */
-/*  */
-/* make appear after delay 1-2s */
 h1.header {
   color: white;
   animation: onload;
-  font-size: 90px;
+  font-size: 30px;
   font-family: "Press Start 2P", cursive;
 }
 @keyframes onload {
@@ -97,12 +109,10 @@ h1.header {
     color: white;
   }
 }
-/*  */
-/*  */
 
 h1.header > span.typewriter-text {
   color: white;
-  font-size: 35px;
+  font-size: 15px;
   border-radius: 0px;
   font-family: "Press Start 2P", cursive;
   font-weight: 100;
@@ -122,7 +132,7 @@ h1.header > span.typewriter-text {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 49%;
   }
 }
 
@@ -147,6 +157,10 @@ h1.header > span.typewriter-text {
   justify-items: center;
   align-items: center;
   color: white;
+}
+
+#about > span.displayOnPhone {
+  display: none
 }
 
 #about > img {
@@ -184,7 +198,6 @@ header.skillsHeader {
   grid-row: 1;
   padding: 8px;
   font-weight: 900px;
-  margin: 40px;
   color: white;
   font-family: "Roboto Mono", monospace;
 }
@@ -206,14 +219,29 @@ div#skills > ul > li.animated {
 }
 
 div#skills > ul > li.animated:hover {
-  width: 175px;
+  width: 185px;
+}
+
+div#skills > ul > li.html {
+  list-style: none;
+  text-align: center;
+  position: relative;
+  width: 100px;
+  height: 80px;
+  margin: 40px auto;
+  transition: width 0.3s;
+}
+
+div#skills > ul > li.html:hover {
+  width: 145px;
 }
 
 /* backend */
 div#skills > ul.backend {
   margin-top: -50px;
   grid-column: 2;
-  grid-row: 2/6;
+  grid-row: 3/6;
+  justify-tracks: space-evenly;
 }
 
 div#skills > ul > li.animatedImg {
@@ -234,7 +262,6 @@ div#skills > ul > li > i,
 div#skills > ul > li > img {
   font-size: 90px;
   height: 120%;
-  color: rgb(0, 81, 128);
   position: absolute;
   left: -40px;
   top: 0;
@@ -249,7 +276,7 @@ span.text {
 /* all skills styles */
 div#skills > ul > li > span {
   font-family: "Open Sans", helvetica;
-  font-size: px;
+  /* font-size: px; */
 }
 
 div#skills > ul > li {
@@ -262,7 +289,7 @@ div#skills > ul > li {
 
 /* hides all skillText and slides from behind */
 div#skills > ul > li > span.skillText {
-  font-size: 34px;
+  font-size: 23px;
   font-family: "Roboto Mono", monospace;
   position: absolute;
   height: 100%;
@@ -277,7 +304,6 @@ div#skills > ul > li > span.skillText {
 div#skills > ul > li:hover > span.skillText {
   color: white;
   opacity: 1;
-  text-align: left;
   font-family: "Roboto Mono", monospace;
 }
 
@@ -313,6 +339,7 @@ div#skills > ul > li:hover > span.skillText {
   text-decoration: none;
   max-width: 170px;
   padding: 8px;
+  letter-spacing: .1em;
 }
 
 #projects > span > header > a:hover {
@@ -325,7 +352,14 @@ div#skills > ul > li:hover > span.skillText {
   padding: 8px;
 }
 
-#contact {
+#projects > span.projectSkills{
+  padding: 17px;
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.692)
+}
+
+
+#footer {
   border-radius: 0;
   grid-row: 5;
   grid-column: 2/6;
@@ -335,9 +369,12 @@ div#skills > ul > li:hover > span.skillText {
   display: flex;
   justify-self: center;
   align-self: end;
+  font-family: "Roboto Mono", monospace;
+
 }
 
 .bodyLinks {
   color: blue;
   text-decoration: underline;
 }
+
