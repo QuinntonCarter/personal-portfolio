@@ -483,7 +483,7 @@ and (max-device-width: 812px) {
       width: 0
     }
     to {
-      width: 98%
+      width: 89%
     }
   }
       
@@ -655,5 +655,30 @@ and (max-device-width: 812px) {
     text-align: center;
     text-justify: center;
     margin: auto;
+  }
+}
+
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px){
+  .nav {
+    padding: 6px;
+  }
+
+  #pageContainer {
+    grid-template-rows: 790px auto auto auto 100px;
+  }
+
+  h1.header > span.typewriter-text {
+    animation: typing 2s steps(23), blink .5s step-end infinite alternate;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    to {
+      width: 74%
+    }
   }
 }
