@@ -426,7 +426,7 @@ and (max-device-width: 812px) {
     height: 30px;
     background-color: blue;
     border-radius: 0px;
-    padding: 18px;
+    /* padding: 10px; */
     margin-left: -10px;
   }
 
@@ -483,7 +483,7 @@ and (max-device-width: 812px) {
       width: 0
     }
     to {
-      width: 98%
+      width: auto
     }
   }
       
@@ -641,10 +641,6 @@ and (max-device-width: 812px) {
     font-size: 20px;
     height: 10%;
     width: 7%
-  }
-
-  div#projects > span > span {
-
   }
 
   #footer{
