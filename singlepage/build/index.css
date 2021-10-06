@@ -646,6 +646,10 @@ and (max-device-width: 812px) {
     width: 7%
   }
 
+  div#projects > span > a > img {
+    width: 70%
+  }
+
   #footer{
     display: flex;
     text-align: center;
