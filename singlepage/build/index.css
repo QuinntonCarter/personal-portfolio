@@ -427,6 +427,7 @@ and (max-device-width: 812px) {
     background-color: blue;
     border-radius: 0px;
     margin-left: -10px;
+    padding: 3px;
   }
 
   .nav > a {
