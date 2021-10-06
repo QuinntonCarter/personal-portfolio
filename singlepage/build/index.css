@@ -388,13 +388,17 @@ div#skills > ul > span.displayOnDesktop > img {
 /* ----------- iPhone X ----------- */
 /* Portrait and Landscape */
 @media only screen 
-and (min-device-width: 375px) 
+and (min-device-width: 320px) 
 and (max-device-width: 812px) {
   html {
     margin: 22px;
   }
   
   .displayOnDesktop {
+    display: none
+  }
+
+  div#skills > ul > span.displayOnDesktop {
     display: none
   }
 
@@ -581,13 +585,13 @@ and (max-device-width: 812px) {
   /* mongoose and express text styles */
   span.text {
     font-size: 14px;
+    margin-left: -22px;
   }
 
   /* axios logo style */  
   div#skills > ul > span.displayOnPhone {
     display: flex;
     margin: 25px auto;
-    margin-left: 10%;
   }
 
   div#skills > ul > span.displayOnPhone > img {
