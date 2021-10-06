@@ -391,7 +391,7 @@ div#skills > ul > span.displayOnDesktop > img {
 and (min-device-width: 320px) 
 and (max-device-width: 812px) {
   html {
-    margin: 22px;
+    margin: 10px;
   }
   
   .displayOnDesktop {
@@ -427,6 +427,7 @@ and (max-device-width: 812px) {
     background-color: blue;
     border-radius: 0px;
     padding: 3px;
+    margin-left: 10px;
   }
 
   .nav > a {
@@ -544,7 +545,7 @@ and (max-device-width: 812px) {
   }
 
   div#skills > ul > li.animated:hover {
-    width: 130px;
+    width: 117px;
   }
 
   div#skills > ul > li.html {
@@ -554,7 +555,7 @@ and (max-device-width: 812px) {
   }
 
   div#skills > ul > li.html:hover {
-    width: 105px;
+    width: 98px;
   }
   
   /* backend skills */
@@ -570,7 +571,7 @@ and (max-device-width: 812px) {
   }
   
   div#skills > ul > li.animatedImg:hover {
-    width: 120px;
+    width: 110px;
   }
   
   /* all skill text styles */
@@ -582,7 +583,10 @@ and (max-device-width: 812px) {
   div#skills > ul > li > span.skillText > span.subSkill {
     font-size: 7px;
   }
-  
+  div#skills > ul > li > span.skillText > img{
+    height: 20%;
+    width: 16%;
+  }
   /* mongoose and express text styles */
   span.text {
     font-size: 14px;
@@ -603,7 +607,7 @@ and (max-device-width: 812px) {
   /* icon styles */
   div#skills > ul > li > i,
   div#skills > ul > li > img {
-    font-size: 40px;
+    font-size: 30px;
     left: -24px;
     height: 50px;
     width: 63px;
