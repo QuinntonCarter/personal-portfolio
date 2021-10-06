@@ -30,7 +30,7 @@ html {
 #pageContainer {
   display: grid;
   row-gap: 150px;
-  grid-template-rows: 800px 700px 700px auto 100px;
+  grid-template-rows: 800px 700px 700px auto 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -378,7 +378,6 @@ div#skills > ul > span.displayOnDesktop > img {
   justify-self: center;
   align-self: end;
   font-family: "Roboto Mono", monospace;
-
 }
 
 .bodyLinks {
@@ -390,8 +389,7 @@ div#skills > ul > span.displayOnDesktop > img {
 /* Portrait and Landscape */
 @media only screen 
 and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3) {
+and (max-device-width: 812px) {
   html {
     margin: 22px;
   }
