@@ -462,13 +462,13 @@ and (max-device-width: 812px) {
   .headerDiv {
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    /* padding: 10px; */
     width: 100%;
     top: 0px;
   }
 
   h1.header {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   h1.header > span.typewriter-text {
@@ -483,7 +483,7 @@ and (max-device-width: 812px) {
       width: 0
     }
     to {
-      width: 78%
+      width: 98%
     }
   }
       
