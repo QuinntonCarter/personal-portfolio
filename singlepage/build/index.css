@@ -426,7 +426,6 @@ and (max-device-width: 812px) {
     height: 30px;
     background-color: blue;
     border-radius: 0px;
-    /* padding: 10px; */
     margin-left: -10px;
   }
 
@@ -483,7 +482,7 @@ and (max-device-width: 812px) {
       width: 0
     }
     to {
-      width: auto
+      width: 98%
     }
   }
       
