@@ -408,7 +408,7 @@ and (max-device-width: 812px) {
 
   #pageContainer {
     row-gap: 38px;
-    grid-template-rows: 400px auto auto auto 100px;
+    grid-template-rows: 490px auto auto auto 100px;
     grid-template-columns: 10px;
   }
 
