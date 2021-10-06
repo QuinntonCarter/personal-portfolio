@@ -18,25 +18,52 @@
   </head>
   <body>
     <div id="pageContainer">
-      <div class="nav">
-        <a title="skip to about me" href="#about"> about </a>
-        <a title="skip to skill details" href="#skills"> skills </a>
-        <a title="skip to project details" href="#projects"> projects </a>
+      <div class='drawer'>
         <a
           title="View my Github repos!"
           href="https://github.com/quinntoncarter"
+          target='_blank'
         >
-          <i class="fab fa-github-alt"> <span> github </span></i>
+          <i class="fab fa-github-alt">
+          </i>
         </a>
         <a title="E-mail me!" href="mailto: qdevzsz@gmail.com">
-          <i class="far fa-paper-plane">
-            <br />
-            <span> e-mail </span>
+          <i class="far fa-envelope">
           </i>
         </a>
         <a title="Text me via your app of choice!" href="sms:+13853432132">
-          <i class="fas fa-mobile-alt"> <span> cell </span> </i>
+          <i class="fas fa-mobile-alt">
+          </i>
         </a>
+      </div>
+
+      <div class="nav">
+        <a class='aboutJump' title="skip to about me" href="#about"> about </a>
+        <a title="skip to skill details" href="#skills"> skills </a>
+        <a title="skip to project details" href="#projects"> projects </a>
+        <i title='contact' id='drawerIcon' class="fas fa-ethernet"> </i>
+        <span class='displayOnDesktop'>
+          <a
+          title="View my Github repos!"
+          href="https://github.com/quinntoncarter"
+          target='_blank'
+
+        >
+          <i class="fab fa-github-alt">
+          </i>
+          </a>
+        <a
+          title="E-mail me!"
+          href="mailto: qdevzsz@gmail.com"
+          >
+          <i class="far fa-envelope">
+          </i>
+        </a>
+        <a title="Text me via your app of choice!" href="sms:+13853432132">
+          <i class="fas fa-mobile-alt">
+          </i>
+        </a>
+      </span>
       </div>
       <div class="headerDiv">
         <h1 class="header">
@@ -48,7 +75,7 @@
       <div id="about">
         <span class='displayOnPhone'> Hello world! </span>
         <p>
-          <span class='displayOnDsktp'> Hello world! </span>
+          <span class='displayOnDesktop'> Hello world! </span>
           <br />
           <br />
           My name is Quinnton Carter and I'm a web developer currently based in
@@ -78,7 +105,7 @@
             <span class="skillText">
               Javascript
             </br>
-            + jQuery
+            <span class='subSkill'> + jQuery </span>
             </span>
           </li>
           <li class="animated">
@@ -90,7 +117,7 @@
             <span class="skillText">
               React.js
               <br/>
-              + React Router <img style='height: 35%' src="./images/react-router-logo-png-transparent.png" alt='axios png logo'/>
+              <span class='subSkill'> + React Router </span> <img src="./images/react-router-logo-png-transparent.png" alt='axios png logo'/>
             </span>
           </li>
           <li class="html">
@@ -114,7 +141,9 @@
             ></i>
             <span class="skillText"> Node.js </span>
           </li>
-          <span class="text" style="font-weight: lighter"> Express.js </span>
+          <span class="text" style="font-weight: lighter">
+            Express.js
+          </span>
           <li class="animatedImg">
             <img src="./images/mongodbLeafPNG.png" alt='mongodb png'/>
             <span class="skillText" style="font-weight: lighter">
@@ -124,9 +153,10 @@
           <span class="text" style="font-weight: lighter; color: darkred">
             mongoose.js
           </span>
-          <li style='margin: 40px auto'>
-            <img style='height: 50%' src="./images/Axios_logo_(2017).svg.png" alt='axios png logo'/>
-        </ul>
+          <!-- <li> -->
+            <span class='displayOnDesktop'> <img src="./images/Axios_logo_(2017).svg.png" alt='axios png logo'/> </span>
+            <span class='displayOnPhone'> <img src="./images/Axios_logo_(2017).svg.png" alt='axios png logo'/> </span>
+        <!-- </ul> -->
       </div>
 
       <div id="projects">
@@ -135,15 +165,16 @@
           <header>
             <a href="http://umbrellaweather.surge.sh"> Umbrella </a>
           </header>
-          A weather app which displays your local weather upon loading and also
-          offers the option to search any place in the world.
-          <br />
+          <p>
+            A weather app which displays your local weather upon loading and also
+            offers the option to search any place in the world.
+          </p>
+            <br />
           <span
-            style="
-              border-radius: 0px;
+            style=
+            "border-radius: 0px;
               background-color: rgba(255, 255, 255, 0.692);
-              color: blue;
-            "
+              color: blue;"
           >
             API:
             <a class="bodyLinks" href="https://www.weatherapi.com">
@@ -176,7 +207,7 @@
                 class="fab fa-css3-alt"
               ></i>
               <img
-                style="height: 20%; width: 20%"
+                style="height: 20%; width: 20%;"
                 src="./images/Axios_logo_(2017).svg.png"
                 alt='axios png logo'/>
             </span>
@@ -186,8 +217,10 @@
           <header>
             <a href="https://cue.surge.sh"> Cue </a>
           </header>
-          <a href=""> </a> This app can be used to find the BPM and key of any
-          song in the API.
+          <p> 
+            This app can be used to find the BPM and key of any
+            song in the API.
+          </p>
           <br />
           <span
             style="
@@ -247,5 +280,7 @@
     </script>
 
     <script src="./scripts/index.js"></script>
+    <!-- <script src="./scripts/vanilla.js"></script> -->
+
   </body>
 </html>

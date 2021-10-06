@@ -4,13 +4,21 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+.displayOnPhone {
+  display: none
+}
+
+#drawerIcon {
+  display: none
+}
+
 /*** page ***/
 * {
   border-radius: 7px;
   text-decoration: none;
 }
-
-body{
+/* ******* mess with thes ******* */
+body {
   margin: 0px;
   padding: 0px;
 }
@@ -39,11 +47,10 @@ html {
   position: fixed;
   align-items: center;
   display: grid;
+  grid-template-rows: 111px 111px 111px 111px;
   padding-left: 15px;
   height: 700px;
   width: 120px;
-  left: 0;
-  top: 0;
   background-color: transparent;
   letter-spacing: .1em;
 }
@@ -62,21 +69,21 @@ html {
   border-radius: 0;
 }
 
-a:hover > i {
+.nav > span {
+  padding-left: 2px;
+  width: 200px
+}
+
+.nav > span > a > i  {
+  color: white;
+  margin: 0px;
+  padding: 14px;
+}
+
+.nav > span > a > i:hover {
+  background-color: rgba(255, 255, 255, 0.692);
   color: blue;
   border-radius: 0;
-  display: block;
-}
-
-div.nav > a > i > span {
-  font-size: 18px;
-  font-family: "Press Start 2P", cursive;
-  color: blue;
-  display: grid;
-}
-
-div.nav > a > i {
-  font-size: 40px;
 }
 
 /* header/name */
@@ -90,8 +97,7 @@ div.nav > a > i {
   border-radius: 0px;
   z-index: 2;
   letter-spacing: .3em;
-  width: 100%
-
+  width: 100%;
 }
 
 h1.header {
@@ -132,7 +138,7 @@ h1.header > span.typewriter-text {
     width: 0;
   }
   to {
-    width: 49%;
+    width: 46%;
   }
 }
 
@@ -157,10 +163,6 @@ h1.header > span.typewriter-text {
   justify-items: center;
   align-items: center;
   color: white;
-}
-
-#about > span.displayOnPhone {
-  display: none
 }
 
 #about > img {
@@ -202,7 +204,7 @@ header.skillsHeader {
   font-family: "Roboto Mono", monospace;
 }
 
-/* frontend */
+/* frontend skills */
 div#skills > ul.frontend {
   grid-column: 1;
   grid-row: 2/6;
@@ -236,12 +238,12 @@ div#skills > ul > li.html:hover {
   width: 145px;
 }
 
-/* backend */
+/* backend skills */
 div#skills > ul.backend {
-  margin-top: -50px;
   grid-column: 2;
-  grid-row: 3/6;
-  justify-tracks: space-evenly;
+  grid-row: 2/6;
+  text-align: center;
+  margin-top: -4%;
 }
 
 div#skills > ul > li.animatedImg {
@@ -273,12 +275,6 @@ span.text {
   font-size: 35px;
 }
 
-/* all skills styles */
-div#skills > ul > li > span {
-  font-family: "Open Sans", helvetica;
-  /* font-size: px; */
-}
-
 div#skills > ul > li {
   list-style: none;
   position: relative;
@@ -307,6 +303,18 @@ div#skills > ul > li:hover > span.skillText {
   font-family: "Roboto Mono", monospace;
 }
 
+/* axios logo style */
+div#skills > ul > span.displayOnDesktop {
+  display: flex;
+  margin: 30px auto;
+  margin-left: 25%;
+}
+
+div#skills > ul > span.displayOnDesktop > img {
+  width: 50%;
+  height: 50%;
+}
+
 /*  */
 /* projects */
 #projects {
@@ -322,7 +330,7 @@ div#skills > ul > li:hover > span.skillText {
 }
 
 #projects > span > img {
-  width: 350px;
+  max-width: 275px;
   border-radius: 0;
   padding: 5px;
 }
@@ -378,3 +386,267 @@ div#skills > ul > li:hover > span.skillText {
   text-decoration: underline;
 }
 
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) {
+  html {
+    margin: 22px;
+  }
+  
+  .displayOnDesktop {
+    display: none
+  }
+
+  #about, #skills, #projects {
+    margin: 2px;
+  }
+
+  #pageContainer {
+    row-gap: 38px;
+    grid-template-rows: 790px auto auto auto 100px;
+    grid-template-columns: 10px;
+  }
+
+  .nav {
+    display: grid;
+    position: fixed;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    grid-column: 1;
+    justify-content: center;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 30px;
+    background-color: blue;
+    border-radius: 0px;
+    padding: 18px
+  }
+
+  .nav > a {
+    font-size: 8px;
+    padding: 3px;
+    grid-row: 1;
+  }
+
+  i#drawerIcon {
+    display: grid
+  }
+
+  div.drawer {
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 0px;
+    padding: 10px;
+    display: grid;
+    position: fixed;
+    grid-template-columns: auto auto auto;
+    column-gap: 38px;
+    width: 160px;
+    right: 0px;
+    bottom: 8%;
+    z-index: 1;
+  }
+
+  div.drawer > a > i {
+    color: blue;
+  }
+
+  .headerDiv {
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    top: 0px;
+  }
+
+  h1.header {
+    font-size: 15px;
+  }
+
+  h1.header > span.typewriter-text {
+    font-size: 10px;
+    margin: 0px;
+    letter-spacing: 0.25px;
+    animation: typing 2s steps(23), blink .5s step-end infinite alternate;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    to {
+      width: 78%
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  #about {
+    font-size: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  #about > span.displayOnPhone {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "Roboto Mono", monospace;
+    margin: 18px;
+    font-size: 18px;
+    display: block;
+  }
+
+  #about > img {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 50%;
+    margin: auto;
+    height: auto
+  }
+
+  #about > p {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  /*  */
+  /*  */
+  #skills {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto auto;
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  header.skillsHeader {
+    display: grid;
+    font-size: 18px;
+    padding: 18px;
+    margin-bottom: -19%
+  }
+  
+  /* frontend skills */
+  div#skills > ul > li.animated {
+    width: 50px;
+    height: 50px;
+    margin: 15px auto;
+  }
+
+  div#skills > ul > li.animated:hover {
+    width: 130px;
+  }
+
+  div#skills > ul > li.html {
+    width: 50px;
+    height: 50px;
+    margin: 15px auto;
+  }
+
+  div#skills > ul > li.html:hover {
+    width: 105px;
+  }
+  
+  /* backend skills */
+  div#skills > ul.backend {
+    margin-top: 1%;
+  }
+
+  div#skills > ul > li.animatedImg {
+    height: 50px;
+    width: 50px;
+    margin: 15px auto;
+    transition: width 0.5s;
+  }
+  
+  div#skills > ul > li.animatedImg:hover {
+    width: 120px;
+  }
+  
+  /* all skill text styles */
+  div#skills > ul > li > span.skillText {
+    font-size: 9px;
+    color: white;
+  }
+  
+  div#skills > ul > li > span.skillText > span.subSkill {
+    font-size: 7px;
+  }
+  
+  /* mongoose and express text styles */
+  span.text {
+    font-size: 14px;
+  }
+
+  /* axios logo style */  
+  div#skills > ul > span.displayOnPhone {
+    display: flex;
+    margin: 25px auto;
+    margin-left: 10%;
+  }
+
+  div#skills > ul > span.displayOnPhone > img {
+    width: 70%;
+    height: 100%;
+  }
+  
+  /* icon styles */
+  div#skills > ul > li > i,
+  div#skills > ul > li > img {
+    font-size: 40px;
+    left: -24px;
+    height: 50px;
+    width: 63px;
+  }
+  
+  /*  */
+  /*  */
+  #projects {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    row-gap: 36px;
+    font-size: 10px;
+  }
+
+  #projects > span > img {
+    width: 200px;
+    margin: auto
+  }
+
+  #projects > span {
+    margin: auto;
+    text-align: center;
+  }
+
+  #projects > span > header {
+    text-align: center;
+  }
+
+  #projects > span > p {
+    margin: auto;
+  }
+
+  div#projects > span > span.projectSkills > i, img {
+    font-size: 20px;
+    height: 10%;
+    width: 7%
+  }
+
+  div#projects > span > span {
+
+  }
+
+  #footer{
+    display: flex;
+    text-align: center;
+    text-justify: center;
+    margin: auto;
+  }
+}
