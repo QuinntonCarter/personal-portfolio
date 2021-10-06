@@ -408,7 +408,7 @@ and (max-device-width: 812px) {
 
   #pageContainer {
     row-gap: 38px;
-    grid-template-rows: 790px auto auto auto 100px;
+    grid-template-rows: 490px auto auto auto 100px;
     grid-template-columns: 10px;
   }
 
@@ -436,7 +436,8 @@ and (max-device-width: 812px) {
   }
 
   i#drawerIcon {
-    display: grid
+    display: grid;
+    font-size: 20px;
   }
 
   div.drawer {
