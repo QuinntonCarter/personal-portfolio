@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { AppContext } from '../appContext.js';
+import { AppContext } from '../context/appContext.js';
 
 export default function ResultComp(props){
     const { name, songId, albumImg, artist, title, musicKey, bpm, timeSig } = props;

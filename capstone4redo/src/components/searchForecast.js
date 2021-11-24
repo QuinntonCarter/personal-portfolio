@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ForecastContext } from '../forecastContext'
+import { ForecastContext } from '../context/forecastContext'
 
 export default function SearchForecast(){
-    const {searchedLocation, setSearchedLocation, forecastDays} = useContext(ForecastContext)
+    const {
+        searchedLocation,
+        setSearchedLocation,
+        forecastDays
+    } = useContext(ForecastContext)
 
     function reset(){
         setSearchedLocation('')
@@ -29,7 +33,9 @@ export default function SearchForecast(){
                     <h2> {Math.floor(searchedLocation.forecast.forecastday[2].day.avgtemp_f)}˚ </h2>
                     <img src={searchedLocation.forecast.forecastday[2].day.condition.icon} alt='condition visual'/>
                     <h4> {searchedLocation.forecast.forecastday[2].day.condition.text} </h4>
-                    <Link to='/'> <button style={{fontSize: '70%'}} onClick={reset}> new location </button> </Link>
+                    <Link to='/'>
+                        <button style={{fontSize: '70%'}} onClick={reset}> new location </button> 
+                    </Link>
                 </>
                 :
                 <>

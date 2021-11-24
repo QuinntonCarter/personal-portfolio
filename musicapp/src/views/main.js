@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
-import { AppContext } from '../appContext.js';
-import ResultComp from './resultComp.js';
+import { AppContext } from '../context/appContext.js';
+import ResultComp from '../components/resultComp.js';
 
 export default function Main(){
     const { searchQuery } = useContext(AppContext);
@@ -35,3 +35,6 @@ export default function Main(){
         </div>
     )
 }
+
+// need to be refactored: Header/banner at top,then route
+// between profile and search view, but affixed to bottom isfooter/navbar

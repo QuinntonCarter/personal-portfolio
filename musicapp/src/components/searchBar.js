@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 
-import { AppContext } from '../appContext.js';
+import { AppContext } from '../context/appContext.js';
 
 export default function Search(){
     const [inputs, setInputs] = useState({artist: '', song: ''})
