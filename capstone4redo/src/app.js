@@ -7,8 +7,9 @@ import About from './components/about'
 
 export default function App(){
     
-    return(
-        <div className='app bg-blue-300 h-screen border-solid border-8 border-white mx-auto text-center'>
+    return (
+        <div className='app grid pb-20 items-center text-center justify-center h-screen border-solid border-8 border-white'>
+            <i className="fas fa-umbrella text-white text-xl"></i>
             <Routes>
                 <Route path='/' element={<Main/>}/>
 

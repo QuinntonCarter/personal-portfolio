@@ -62,6 +62,7 @@ export default function ForecastContextProvider(props){
     return(
         <ForecastContext.Provider 
         value={{
+            now,
             autoLocation,
             autoCityName,
             getForecast,
