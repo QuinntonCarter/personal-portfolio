@@ -4,13 +4,15 @@ import ReactDOM from 'react-dom';
 import App from './app';
 import './index.css'
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ForecastContextProvider } from './context/forecastContext';
+require('dotenv').config();
+console.log(process.env.KEY)
 
 ReactDOM.render(
-    <Router>
+    <BrowserRouter>
         <ForecastContextProvider>
             <App/>
         </ForecastContextProvider>
-    </Router>,
+    </BrowserRouter>,
     document.getElementById('root'))

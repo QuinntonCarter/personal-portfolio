@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import date from 'date-and-time';
 
+
 const ForecastContext = React.createContext();
 
-function ForecastContextProvider(props){
+export default function ForecastContextProvider(props){
     const [autoLocation, setAutoLocation] = useState();
     const [autoCityName, setAutoCityName] = useState();
     const [toggle, setToggle] = useState(false);
@@ -76,4 +77,4 @@ function ForecastContextProvider(props){
     )
 }
 
-export {ForecastContextProvider, ForecastContext}
+export { ForecastContextProvider, ForecastContext }

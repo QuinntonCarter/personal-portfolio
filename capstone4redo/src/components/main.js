@@ -9,8 +9,9 @@ export default function Main(){
 
     const { getForecast } = useContext(ForecastContext)
 
-    const [inputs, setInputs] = useState({location:''})
-
+    const [inputs, setInputs] = useState({
+        location:''
+    })
 
     function handleChange(e){
         const { name, value } = e.target
@@ -21,10 +22,10 @@ export default function Main(){
         getForecast(inputs.location)
     }
 
-    const tempColor = Math.floor(autoLocation.current.temp_f) >= 65 ? "text-yellow-200" : "text-blue-500"
+    const tempColor = autoLocation ? Math.floor(autoLocation.current.temp_f) >= 65 ? "text-yellow-200" : "text-blue-500" : null
 
     return(
-            <form className='grid grid-cols-1 grid-rows-3 bg-white bg-opacity-50 m-8'>
+            <form className='grid rounded-lg p-5 grid-cols-1 grid-rows-3 bg-white bg-opacity-60 m-8'>
                 <h1 className='text-8xl p-8'>
                     <i className={`fas fa-umbrella ${tempColor}`}/>
                 </h1>
