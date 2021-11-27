@@ -38,11 +38,11 @@ export default function Main(props){
                 <button className={`font-medium m-2 shadow hover:bg-${timeStyle().btnColorH} text-white bg-${timeStyle().btnColor} p-3 rounded-full`} onClick={() => inputs.location.length > 0 ? handleSubmit : null}> check forecast </button>
                 { autoLocation.data ? 
                     <div className='m-4 grid grid-cols-1 mx-auto place-items-center'>
-                        <h2> {forecastDays[0]} </h2>
-                        <h1> {`${ipData.data.city}, ${ipData.data.region}, ${ipData.data.country}`} </h1>
-                        <h2 style={{fontSize: '250%'}}> {Math.floor(autoLocation.data.current.temp_f)}˚F</h2>
-                        <img src={autoLocation.data.current.condition.icon} alt='condition visual'/>
-                        <h3> {autoLocation.data.current.condition.text}</h3>
+                        <h2 className='font-medium text-xl'> {forecastDays[0]} </h2>
+                        <h1 className='font-medium text-lg'> {`${ipData.data.city}, ${ipData.data.region}, ${ipData.data.country}`} </h1>
+                        <h2 className='font-bold' style={{fontSize: '250%'}}> {Math.floor(autoLocation.data.current.temp_f)}˚F</h2>
+                        <img className='font-medium text-lg' src={autoLocation.data.current.condition.icon} alt='condition visual'/>
+                        <h3 className='font-medium text-lg'> {autoLocation.data.current.condition.text}</h3>
                         <h4> Humidity: {autoLocation.data.current.humidity}% </h4>
                     </div>
                     :
