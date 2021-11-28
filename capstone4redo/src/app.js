@@ -9,13 +9,11 @@ import { ForecastContext } from './context/forecastContext';
 export default function App(){
     const {
         now,
-        autoLocation,
-        searchedLocation
+        autoLocation
     } = useContext(ForecastContext);
 
     let time = date.format(now, "HH:mm");
 
-    const navigate = useNavigate();
 
     const timedImg = () => {
         if(time > "06:00" & time < "17:45"){
@@ -79,8 +77,8 @@ export default function App(){
     }
     
     return (
-        <div style={{backgroundImage:`url(${timedImg().img})`, backgroundPosition: 'center', backgroundSize: 'cover'}} className={`grid pb-20 items-center text-center text-${timedImg().textColor} justify-center h-screen border-solid border-8 border-white`}>
-            <i className={`fas fa-umbrella text-${timedImg().textColor} text-xl`}></i>
+        <div style={{backgroundImage:`url(${timedImg().img})`}} className={`flex h-screen bg-cover bg-center flex-col items-center object-fit-cover text-center text-${timedImg().textColor} justify-center h-auto border-solid border-8 border-white`}>
+            <i className={`fas fa-umbrella text-${timedImg().textColor} text-xl pt-6 mx-auto`}></i>
             <Routes>
                 <Route path='/'
                     element={<Main timeStyle={timeStyle} timedFont={timedImg().textColor} tempStyle={tempStyle}/>}
