@@ -16,7 +16,7 @@ export default function MemesView(props){
         mappedMemes ? 
         <div className='inline-grid mx-auto pt-12 pb-16'>
             {mappedMemes}
-            <p className='p-2 text-center text-xs font-mono text-navy'> Quinnton Carter 2021 </p>
+            <p className='p-2 text-center text-xs font-mono text-blue-300'> Quinnton Carter 2021 </p>
         </div>
         : 
         <h4> Memes will display here </h4>
