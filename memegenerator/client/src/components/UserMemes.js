@@ -110,12 +110,12 @@ export default function UserMemes(props){
     return(
         <>
         {imgSrc ?
-            <div className='bg-cream my-3 p-4'>
+            <div className='bg-cream inline-grid my-3 p-4'>
                 { !toggleEdit ?
-                    <div className='grid m-auto p-0 h-auto w-auto'>
+                    <div className='grid m-auto p-0 h-auto mx-auto w-auto'>
                         <p className='text-xs'> Local ID: '{tempID}' created: {created} </p>
                         <img src={imgSrc} alt={`user meme: ${tempID}`}/>
-                        <div className='grid-cols-4 inline-grid'>
+                        <div className='grid-cols-4 inline-grid mx-auto'>
                             { !toggleSave ? 
                             <>
                                 <button className='col-span-1 text-sm m-2 p-1 rounded bg-soot text-white' onClick={()=> { setToggleEdit(prevState => !prevState) }}> edit </button>
