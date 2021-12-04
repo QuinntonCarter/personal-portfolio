@@ -21,7 +21,7 @@ export default function MemeForm(props){
             { randomMeme.imgSrc ?
                 <div className='rounded pt-3 px-3'>
                     <h1 className='border-solid border-2 border-navy p-2 text-center bg-white rounded font-normal text-navy'>{randomMeme.name}</h1>
-                    <form onSubmit={handleSubmit} className='grid grid-cols-4 pt-2'>
+                    <form onSubmit={handleSubmit} className='grid pt-2 grid-cols-4 '>
                         <button className='col-span-2 text-xs px-4 p-1 m-1 mx-auto font-medium rounded-full w-auto bg-cream border-b-4 border-yellow-400 text-indigo-800 inline-flex items-center' >
                             <span> Generate </span>
                             <BeakerIcon className='w-5'/>
