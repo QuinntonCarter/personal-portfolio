@@ -21,7 +21,10 @@ export default function Main(props){
 
     function handleChange(e){
         const { name, value } = e.target
-        setInputs(prevInputs => ({...prevInputs, [name]: value}))
+        setInputs(prevInputs => ({
+            ...prevInputs,
+            [name]: value}
+        ))
     }
 
     function handleSubmit(e){
